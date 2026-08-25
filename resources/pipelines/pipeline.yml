@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_dlt_order_pipeline_dab_demo_ease:
+      name: dlt_order_pipeline_dab_demo_ease
+      libraries:
+        - notebook:
+            path: ../notebooks/delt_dab_demo_pipeline.sql
+      schema: bronze
+      continuous: false
+      development: true
+      photon: true
+      channel: PREVIEW
+      catalog: ${resources.schemas.bronze_schemas.catalog_name}
+      serverless: true
+      root_path: ../notebooks/

@@ -1,0 +1,7 @@
+targets:
+  qa:
+    permissions:
+      - group_name: admins
+        level: CAN_RUN
+      - group_name: admins
+        level: CAN_VIEW

@@ -1,2 +1,27 @@
 bundle:
     name: easewithdata_dab_demo
+
+# resources:
+#     # resources should be here
+
+include:
+    - src/*.yml
+    - src/*/*.yml
+    - resources/*.yml
+    - resources/*/*.yml
+
+permissions:
+    - group_name: admins
+      level: CAN_MANAGE
+
+targets:
+    dev:
+        mode: development
+        default: true
+        workspace:
+            host: https://dbc-d80b32d2-6bf2.cloud.databricks.com/
+    qa:
+        default: false
+        workspace:
+            host: https://dbc-d80b32d2-6bf2.cloud.databricks.com/
+
